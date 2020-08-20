@@ -4,7 +4,9 @@ please install:
 pip -r requirements.txt
 
 this django website use elasticsearch
+(you should start elastic search on port:8000 first.)
 and contin sense chrome extension for working with elasatic search json.
+
 
 Django sqlite db contain netflix dataset.
 Only one page is working:
