@@ -1,0 +1,27 @@
+pip install django==2.2.11
+django-admin startproject project
+cd project/
+python manage.py migrate
+python manage.py createsuperuser
+# Username (leave blank to use 'g'):
+# Email address: georgi.tanev86@gmail.com
+# djangoelastic123$
+
+# SENSE - elastic
+GET /_cat/indices?v
+PUT  /product?pretty
+
+PUT /product/_doc/1
+{
+    "name": "Iphone 9",
+    "price": 2000
+}
+
+# "reason": "index [product] blocked by: [TOO_MANY_REQUESTS/12/index read-only / allow delete (api)];"
+# https://stackoverflow.com/questions/50609417/elasticsearch-error-cluster-block-exception-forbidden-12-index-read-only-all
+# Solution in txt file 'elastic_low_disc_space_settings.txt'
+
+python .\manage.py startapp blog
+
+
+pip install django-elasticsearch-dsl

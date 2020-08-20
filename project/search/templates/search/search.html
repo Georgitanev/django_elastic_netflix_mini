@@ -1,0 +1,14 @@
+Hello Elasatic with Django
+
+<form method='get'>
+    <input id="q" name="q" type="text" placeholder="your search..." />
+</form>
+<ul>
+{% for item in posts %}
+<li>
+<!--    {{item.id}}-->
+    {{item.title}}
+<!--    {{item.slug}}-->
+</li>
+{% endfor %}
+</ul>
